@@ -6,13 +6,13 @@
               <h2>Donate <span>Life</span></h2>
               <div class="row">
                   <div class="col-sm-6">
-                      <p>Ciudad Guayana Venezuela
+                      <p>{{_servicio.info.ciudad}}
                           <br/>Zip - 382481</p>
                   </div>
                   <div class="col-sm-6">
                       <ul>
-                          <li><a href="#"><i class="fa fa-phone"></i> +58 0424 9736104</a></li>
-                          <li><a href="#"><i class="ti-email"></i> info@donatelife.com.ve</a></li>
+                          <li><a href="#"><i class="fa fa-phone"></i> {{_servicio.info.telefono}}</a></li>
+                          <li><a href="mailTo:{{_servicio.info.email}}"><i class="ti-email"></i>{{_servicio.info.email}}</a></li>
                       </ul>
                   </div>
               </div>
@@ -49,11 +49,11 @@
           </div>
           <div class="col-md-2 col-lg-2 col-md-offset-2 col-lg-offset-2">
               <ul class="footer-social">
-                  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                  <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                  <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                  <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                  <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                  <li><a target="_blank" [href]= "_servicio.info.facebook"><i class="fa fa-facebook"></i></a></li>
+                  <li><a target="_blank" href="#"><i class="fa fa-google-plus"></i></a></li>
+                  <li><a target="_blank" [href]="_servicio.info.twitter"><i class="fa fa-twitter"></i></a></li>
+                  <li><a target="_blank" href="#"><i class="fa fa-linkedin"></i></a></li>
+                  <li><a target="_blank" href="#"><i class="fa fa-pinterest"></i></a></li>
               </ul>
           </div>
       </div>
@@ -62,7 +62,7 @@
       <div class="container">
           <div class="row">
               <div class="col-sm-6 col-md-6 col-lg-6">
-                  Copyright &copy; 2018 <a href="#">insurancepress.com</a>
+                  Copyright &copy; {{anio}} <a href="#">insurancepress.com</a>
               </div>
               <div class="col-sm-6 col-md-6 col-lg-6 text-right">
                   <a href="#">Terms & Conditions</a>
